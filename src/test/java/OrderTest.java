@@ -4,7 +4,7 @@ import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 
 @RunWith(Parameterized.class)
-public class OrderTest extends BaseOrderTest {
+public class OrderTest extends BaseTest1 {
     private WebDriver driver;
     private final String name;
     private final String surname;
@@ -47,6 +47,79 @@ public class OrderTest extends BaseOrderTest {
 
 
         // Страница "Для кого самокат"
+        // Вводим name в плейсхолдер
+        orderPage.setName(name);
+
+        // Вводим surname в плейсхолдер
+        orderPage.setSurname(surname);
+
+        // Вводим address в плейсхолдер
+        orderPage.setAddress(address);
+
+        // Заполнение subway
+        // Кликаем на плейсхолдер subway
+        orderPage.clickPlaceholderSubway();
+
+        // Выбираем subway
+        orderPage.clickSelectedSubway(subway);
+
+        // Вводим phoneNumber в плейсхлдер
+        orderPage.setPhoneNumber(phoneNumber);
+
+        // Закрываем куки
+        orderPage.clickCloseButtonCookie();
+
+        // Нажимаем на кнопку "Далее"
+        orderPage.clickNextButton();
+
+
+        //Страница "Про аренду"
+        // Вводим дату
+        orderPage.setDate(date);
+
+        // Выбор срока аренды
+        // Кликаем на надпись "Про аренду"
+        orderPage.clickAboutOrderTitle();
+
+        // Кликаем на плейсхолдер строка аренды
+        orderPage.clickPlaceholderRentalPeriod();
+
+        // Выбираем срок аренды в выпадающем списке и кликаем по нему
+        orderPage.clickSelectedRentalPeriod(rentalPeriod);
+
+        // Выбираем цвет самоката
+        orderPage.setColor(color);
+
+        // Вводим комменетарий для курьера
+        orderPage.setComment(comment);
+
+        // Нажимаем на кнопку "Заказать" после заполнения данных
+        orderPage.clickOrderCreateButton();
+
+
+        // Страница с подтверждением заказа
+        // Кликаем по кнопке "Да"
+        orderPage.clickOrderConfirmButton();
+
+
+        // Ожидаем появления всплывающего окна с сообщением об успешном создании заказа
+        orderPage.getOrderCreation();
+
+    }
+
+    @Test
+    public void orderPositiveTest2() {
+
+        // Открыть домашнюю страницу Яндекс самокат
+        orderMainPage.openPage();
+
+        // Скролим до нижней кнопки "Заказать"
+        orderMainPage.scrollBottomButtonOrder();
+
+        // Нажать на нижнюю кнопку "Заказать"
+        orderMainPage.clickBottomButtonOrder();
+
+// Страница "Для кого самокат"
         // Вводим name в плейсхолдер
         orderPage.setName(name);
 

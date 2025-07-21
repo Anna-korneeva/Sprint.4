@@ -11,7 +11,7 @@ import java.time.Duration;
 
 public class OrderPage {
     private WebDriver driver;
-    private By orderCreation = By.xpath("//div[@class='Order_Modal__YZ-d3']");
+    private By orderCreation = By.xpath("//div[@class='Order_ModalHeader__3FDaJ']");
     private By confirmButton = By.xpath(".//button[text()='Да']");
     private By createButton = By.xpath("//div[contains(@class,'Order_Buttons')]/button[text()='Заказать']");
     private By commentField = By.cssSelector("input[placeholder='Комментарий для курьера']");

@@ -6,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import page.FAQPage;
+import page.OrderMainPage;
+import page.OrderPage;
 
 import java.time.Duration;
 
@@ -13,6 +15,8 @@ public class BaseTest1 {
     WebDriver driver = new ChromeDriver();
     //    WebDriver driver = new FirefoxDriver();
     FAQPage faqPage;
+    OrderMainPage orderMainPage;
+    OrderPage orderPage;
 
 
     @Before
@@ -28,6 +32,9 @@ public class BaseTest1 {
 //        driver = new FirefoxDriver(options);
 
         faqPage = new FAQPage(driver);
+        orderMainPage = new OrderMainPage(driver);
+        orderPage = new OrderPage(driver);
+
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
     }
 
