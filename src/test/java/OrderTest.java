@@ -1,11 +1,10 @@
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.openqa.selenium.WebDriver;
+
 
 @RunWith(Parameterized.class)
 public class OrderTest extends BaseTest1 {
-    private WebDriver driver;
     private final String name;
     private final String surname;
     private final String address;

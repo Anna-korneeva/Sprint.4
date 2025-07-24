@@ -13,7 +13,7 @@ import java.time.Duration;
 
 public class BaseTest1 {
     WebDriver driver = new ChromeDriver();
-    //    WebDriver driver = new FirefoxDriver();
+//        WebDriver driver = new FirefoxDriver();
     FAQPage faqPage;
     OrderMainPage orderMainPage;
     OrderPage orderPage;

@@ -2,14 +2,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import page.FAQPage;
 
 import static org.junit.Assert.assertTrue;
 
 @RunWith(Parameterized.class)
 public class FAQTest extends BaseTest1 {
-    private WebDriver driver;
     private final int questionIndex;
     private final By answerLocator;
     private final String expectedAnswer;
